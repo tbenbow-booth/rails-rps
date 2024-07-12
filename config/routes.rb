@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
 
-end
+  get ("/") , { :controller => "zebra" , :action => "ant"}
+
+  get ("/rock") , { :controller => "zebra" , :action => "giraffe"}
+
+  get ("/paper") , { :controller => "zebra" , :action => "elephant"}
+
+  get ("/scissors") , { :controller => "zebra" , :action => "lion"}
+
+  end

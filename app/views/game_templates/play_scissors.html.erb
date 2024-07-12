@@ -1,0 +1,47 @@
+
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>Sinatra RPS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+
+  <body>
+    <div>
+      <a href = "/rock">Play Rock</a>
+    </div>
+    <div>
+      <a href = "/paper">Play Paper</a>
+    </div>
+    <div>
+      <a href = "/scissors">Play Scissors</a>
+    </div>
+     <div>
+      <a href = "/">Rules</a>
+    </div>
+
+    <%= yield %>
+
+  </body>
+</html>
+
+  <h2>We played scissors!</h2>
+
+  <h2>
+  They played <%= @comp_moves =%>!
+  </h2>
+
+  <% if @outcome == "won" %>
+    <h2 style="color: green">
+      We <%= @outcome =%>!
+  </h2>
+  <% elsif @outcome == "lost" %>
+    <h2 style="color: red">
+      We <%= @outcome =%>!
+  </h2>
+  <% else @outcome == "tied" %>
+    <h2 style="color: black">
+      We <%= @outcome =%>!
+  </h2>
+<% end %>
